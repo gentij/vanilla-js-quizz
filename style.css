@@ -176,3 +176,12 @@ main {
 .questions ul li:hover {
     background-color: #999;
 }
+
+@media(max-width: 800px) {
+    .questions {
+        width:90vw;
+    }
+    .questions ul {
+        width: 90%;
+    }
+}
