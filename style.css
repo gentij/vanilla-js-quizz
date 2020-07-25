@@ -141,10 +141,8 @@ main {
 .questions ul li {
     list-style: none;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    width: 100%;
     margin: 20px 0;
     font-size: 20px;
     padding: 5px 0;
@@ -167,14 +165,6 @@ main {
 
 .questions .btn{
     background-color: #333;
-}
-
-.correctAnswer {
-    background: green;
-}
-
-.selected {
-    background: #333;
 }
 
 .questions ul li:hover {
@@ -214,8 +204,12 @@ main {
     color: #117A8B;
 }
 
-.none {
-    display: none;
+.correctAnswer {
+    background: green;
+}
+
+.selected {
+    background: #333;
 }
 
 
@@ -237,4 +231,8 @@ main {
         height: 70vh;
         top: 50%;
     }
+}
+
+.none {
+    display: none;
 }

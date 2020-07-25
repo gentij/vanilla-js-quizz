@@ -52,11 +52,9 @@ function showquizzData(){
       const questionList = document.getElementsByClassName('questionList')
 
       for(let i = 0; i < questionList.length; i++){
-          if(questionList[i].innerHTML === "undefined") {
+          if(questionList[i].innerHTML == "undefined") {
               questionList[i].classList.add('none')
-          } else {
-              questionList[i].classList.remove('none')
-          }
+          } 
 
           if(questionList[i].innerHTML == answers[correctAnswerIndex]){
               questionList[i].classList.add('correct')
@@ -184,7 +182,6 @@ function submitAnswer() {
     document.querySelector('.correct').classList.add('correctAnswer')
     document.querySelector('.correct').classList.remove('selected')
     document.querySelector('.next').disabled = false;
-
 
     document.querySelector('.submit').disabled = true;
 
