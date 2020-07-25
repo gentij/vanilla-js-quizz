@@ -49,7 +49,7 @@
              </div>
              </section>
 
-        <dov class="header animate__animated animate__fadeIn">
+        <div class="header animate__animated animate__fadeIn">
             <h1>Welcome to the quizz</h1>
             <p>Customize your own quizz or just go random</p>
         </div>
@@ -119,14 +119,21 @@
 
         <!-- Question section -->
 
-        <div class="container p-5 none questions" id="questions">
+        <div class="container p-5 none questions animate__animated" id="questions">
             <h5 id="score">Your score: <span id="scoreCounter">0</span></h5>
             <h1 class="question">Question</h1>
             <ul>
                 
             </ul>
-            <button onclick="submitAnswer()" class="btn btn-info btn-block">Submit/Skip</button>
+            <button onclick="submitAnswer()" class="btn btn-info btn-block submit">Submit/Skip</button>
             <button onclick="nextQuestion()" class="btn btn-info btn-block next" disabled>Next</button>
+        </div>
+
+        <div class="none results-container animate__animated">
+            <h3>Congratulations for finishing the quizz.</h3>
+            <p class="result">asdasdasd</p>
+            <p class="ending">Click the button to get back to the home page</p>
+            <button onclick="end()" class="btn btn-info btn-block">Finish quizz</button>
         </div>
 
     </main>

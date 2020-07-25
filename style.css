@@ -116,14 +116,18 @@ main {
     text-align: center;
 }
 
+.header {
+    margin-top: 20px;
+}
+
 #form select, #form input {
     background: darkslategray;
     color: #fff;
     outline: none;
 }
 #form button {
-    background-color: #333;
-    border: 2px solid #111;
+    background-color: #111;
+    border: 2px solid #117A8B;
 }
 
 .questions {
@@ -137,6 +141,10 @@ main {
 .questions ul li {
     list-style: none;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 20px 0;
     font-size: 20px;
     padding: 5px 0;
@@ -161,10 +169,6 @@ main {
     background-color: #333;
 }
 
-.none {
-    display: none;
-}
-
 .correctAnswer {
     background: green;
 }
@@ -177,11 +181,60 @@ main {
     background-color: #999;
 }
 
+.results-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 50vw;
+    height: 50vh;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    border: 3px solid #117A8B;
+}
+
+.results-container .btn{
+    background-color: #333;
+    width: 85%;
+}
+
+.ending {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.result {
+    font-size: 25px;
+    font-weight: 900;
+    color: #117A8B;
+}
+
+.none {
+    display: none;
+}
+
+
+
 @media(max-width: 800px) {
     .questions {
         width:90vw;
     }
     .questions ul {
         width: 90%;
+    }
+
+    #form {
+        width: 90vw;
+    }
+
+    .results-container {
+        width: 90vw;
+        height: 70vh;
+        top: 50%;
     }
 }

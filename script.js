@@ -87,7 +87,8 @@ function showquizzData(){
 
 function nextQuestion() {
 
-    console.log();
+    document.querySelector('.submit').disabled = false;
+
 
     quizzData.results.forEach(element => questions.push(element.question))
 
@@ -98,13 +99,13 @@ function nextQuestion() {
     let amount = document.querySelector('#amount').value
 
     if(amount) {
-        if(questionIndex > amount) {
+        if(questionIndex > amount - 2) {
             document.querySelector('.next').classList.add('none')
         }
-    } else {
-        if(questionIndex > 10) {
-            document.querySelector('.next').classList.add('none')
-        }
+        } else {
+            if(questionIndex > 8) {
+                document.querySelector('.next').classList.add('none')
+            }
     }
 
 
@@ -187,6 +188,31 @@ function submitAnswer() {
     if(document.querySelector('.next').classList.contains('none')) {
         console.log('baba');
     }
+
+    document.querySelector('.submit').disabled = true;
+
+    let amount = document.querySelector('#amount').value
+
+    if(amount) {
+        if(questionIndex > amount - 2) {
+            document.querySelector('#questions').classList.add('animate__zoomOut')
+            document.querySelector('.results-container').classList.add('animate__zoomIn')
+            document.querySelector('.results-container').classList.remove('none')
+            document.querySelector('.result').innerHTML = `Your total score: ${scoreCounter.innerHTML} / ${amount}`
+        }
+        } else {
+            if(questionIndex > 8) {
+                document.querySelector('#questions').classList.add('animate__zoomOut')
+                document.querySelector('.results-container').classList.add('animate__zoomIn')
+                document.querySelector('.results-container').classList.remove('none')
+                document.querySelector('.result').innerHTML = `Your total score: ${scoreCounter.innerHTML} / 10`
+            }
+    }
+}
+
+function end() {
+    location.reload();
+    return false;
 }
 
 function getQuestions() {
