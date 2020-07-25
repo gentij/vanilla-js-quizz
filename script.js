@@ -185,9 +185,6 @@ function submitAnswer() {
     document.querySelector('.correct').classList.remove('selected')
     document.querySelector('.next').disabled = false;
 
-    if(document.querySelector('.next').classList.contains('none')) {
-        console.log('baba');
-    }
 
     document.querySelector('.submit').disabled = true;
 
